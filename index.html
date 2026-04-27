@@ -505,7 +505,174 @@
   }
 
 }
+/* ================= PRICING ================= */
 
+.pricing{
+  padding:100px 8%;
+  text-align:center;
+  position:relative;
+}
+
+.pricing-title{
+  font-size:3rem;
+  margin-bottom:15px;
+  background:linear-gradient(90deg,#00b7ff,#a100ff,#ff00aa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.pricing-subtitle{
+  color:#cfcfcf;
+  margin-bottom:60px;
+  font-size:1.1rem;
+}
+
+.pricing-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:35px;
+}
+
+.price-card{
+  position:relative;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:30px;
+  padding:45px 30px;
+  backdrop-filter:blur(14px);
+  transition:0.4s ease;
+  overflow:hidden;
+}
+
+.price-card::before{
+  content:'';
+  position:absolute;
+  width:200px;
+  height:200px;
+  background:radial-gradient(circle,#00b7ff33,transparent 70%);
+  top:-100px;
+  right:-100px;
+}
+
+.price-card:hover{
+  transform:translateY(-15px) scale(1.03);
+  border-color:#00d9ff;
+  box-shadow:0 0 35px rgba(0,183,255,0.25);
+}
+
+.popular{
+  border:2px solid #00d9ff;
+  transform:scale(1.05);
+  box-shadow:0 0 40px rgba(0,183,255,0.2);
+}
+
+.popular:hover{
+  transform:scale(1.08) translateY(-10px);
+}
+
+.popular-tag{
+  position:absolute;
+  top:18px;
+  right:-40px;
+  background:linear-gradient(90deg,#ff00aa,#a100ff);
+  padding:8px 50px;
+  transform:rotate(45deg);
+  font-size:0.8rem;
+  font-weight:600;
+}
+
+.price-badge{
+  display:inline-block;
+  padding:8px 18px;
+  border-radius:50px;
+  background:rgba(0,183,255,0.15);
+  color:#00d9ff;
+  margin-bottom:20px;
+  font-size:0.9rem;
+  font-weight:600;
+}
+
+.premium{
+  background:rgba(161,0,255,0.18);
+  color:#d38cff;
+}
+
+.pro{
+  background:rgba(255,0,170,0.15);
+  color:#ff77cb;
+}
+
+.elite{
+  background:rgba(255,180,0,0.18);
+  color:#ffc14d;
+}
+
+.price-card h3{
+  font-size:1.8rem;
+  margin-bottom:20px;
+}
+
+.price{
+  font-size:3rem;
+  font-weight:700;
+  margin-bottom:30px;
+  background:linear-gradient(90deg,#00d9ff,#ff00aa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.price span{
+  font-size:1.3rem;
+}
+
+.price-card ul{
+  list-style:none;
+  text-align:left;
+  margin-bottom:35px;
+}
+
+.price-card ul li{
+  margin-bottom:15px;
+  color:#d8d8d8;
+}
+
+.price-btn{
+  display:inline-block;
+  padding:15px 35px;
+  border-radius:50px;
+  text-decoration:none;
+  color:white;
+  font-weight:600;
+  background:linear-gradient(90deg,#00b7ff,#a100ff);
+  transition:0.4s;
+  box-shadow:0 0 20px rgba(0,183,255,0.3);
+}
+
+.price-btn:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 30px rgba(161,0,255,0.5);
+}
+
+.enterprise{
+  border:1px solid rgba(255,180,0,0.3);
+}
+
+@media(max-width:768px){
+
+  .pricing-title{
+    font-size:2.3rem;
+  }
+
+  .popular{
+    transform:none;
+  }
+
+  .popular:hover{
+    transform:translateY(-10px);
+  }
+
+}
+    
   </style>
 </head>
 <body>
@@ -673,7 +840,119 @@
   <div class="footer-bottom">
     <p>© 2026 PushApp — Boost Your App To The Next Level 🚀</p>
   </div>
+<!-- ================= PRICING SECTION ================= -->
 
+<section class="pricing">
+
+  <h2 class="pricing-title">
+    Paket Harga PushApp
+  </h2>
+
+  <p class="pricing-subtitle">
+    Pilih paket terbaik untuk meningkatkan performa aplikasi Anda 🚀
+  </p>
+
+  <div class="pricing-container">
+
+    <!-- CARD 1 -->
+    <div class="price-card">
+
+      <div class="price-badge">Starter</div>
+
+      <h3>Basic Boost</h3>
+
+      <div class="price">
+        Rp500<span>rb</span>
+      </div>
+
+      <ul>
+        <li>✅ +50 Download Rate</li>
+        <li>✅ 20 Review Positif</li>
+        <li>✅ Delivery Cepat</li>
+        <li>✅ Support 24/7</li>
+      </ul>
+
+      <a href="#" class="price-btn">Pilih Paket</a>
+
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="price-card popular">
+
+      <div class="popular-tag">🔥 POPULER</div>
+
+      <div class="price-badge premium">
+        Growth
+      </div>
+
+      <h3>Growth Boost</h3>
+
+      <div class="price">
+        Rp2<span>jt</span>
+      </div>
+
+      <ul>
+        <li>✅ +300 Download Rate</li>
+        <li>✅ 150 Review Positif</li>
+        <li>✅ Ranking Optimization</li>
+        <li>✅ Priority Support</li>
+      </ul>
+
+      <a href="#" class="price-btn">Pilih Paket</a>
+
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="price-card">
+
+      <div class="price-badge pro">
+        Pro
+      </div>
+
+      <h3>Ultimate Viral</h3>
+
+      <div class="price">
+        Rp5<span>jt</span>
+      </div>
+
+      <ul>
+        <li>✅ +1000 Download Rate</li>
+        <li>✅ 500 Review Positif</li>
+        <li>✅ Top Chart Boost</li>
+        <li>✅ Organic Traffic Strategy</li>
+      </ul>
+
+      <a href="#" class="price-btn">Pilih Paket</a>
+
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="price-card enterprise">
+
+      <div class="price-badge elite">
+        Enterprise
+      </div>
+
+      <h3>Massive Scale</h3>
+
+      <div class="price">
+        Rp10<span>jt</span>
+      </div>
+
+      <ul>
+        <li>✅ +3000 Download Rate</li>
+        <li>✅ 1500 Review Positif</li>
+        <li>✅ Full App Marketing</li>
+        <li>✅ Dedicated Manager</li>
+      </ul>
+
+      <a href="#" class="price-btn">Hubungi Kami</a>
+
+    </div>
+
+  </div>
+
+</section>
 </footer>
 
 </body>
